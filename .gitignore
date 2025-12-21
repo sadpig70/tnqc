@@ -1,0 +1,11 @@
+# Legacy
+/_legacy/
+
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# System
+.DS_Store
+thumbs.db
