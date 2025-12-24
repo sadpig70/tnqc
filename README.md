@@ -24,32 +24,33 @@ TNQC is realized through four interconnected technologies, each addressing a spe
 **NISQ Integrated System Optimizer**
 
 * **Role**: Tactical Layer (Optimization)
-* **Key Tech**: **TQQC** (Temporal Quantum Quality Control) - Tuning temporal parameters to mitigate errors.
-* **Result**: +12.13% avg fidelity improvement, ~51% computation saved (7-qubit simulation)
+* **Key Tech**: **TQQC** (Temporal Quantum Quality Control)
+* **Status**: **v1.1** (IBM Integration, 350+ Tests Passed)
+* **Result**: +12.13% fidelty (sim), full Qiskit support
 
 ### 2. [PROPHET (Immunity Platform)](https://github.com/sadpig70/PROPHET)
 
 **Predictive Risk Operations**
 
 * **Role**: Strategic Layer (Immunity)
-* **Key Tech**: **NQC** (Noise Quantum Computing) - Predicting collapse via noise injection & RL-based self-healing.
-* **Status**: Multi-backend support (IBM, AWS, IonQ)
+* **Key Tech**: **NQC** (Noise Quantum Computing) & **RL Agents**
+* **Status**: **v2.0** (RL-Driven Optimization, Multi-Backend)
 
 ### 3. [QNS (Symbiotic Framework)](https://github.com/sadpig70/QNS)
 
 **Quantum Noise Symbiote**
 
 * **Role**: Adaptive Layer (Symbiosis)
-* **Key Tech**: **DriftScanner** & **LiveRewirer** - Real-time adaptation to hardware noise drift.
-* **Status**: JIT circuit rewiring implemented
+* **Key Tech**: **DriftScanner** & **Crosstalk Resilience**
+* **Status**: **v2.4** (Mock Backend, Noise Benchmarks)
 
 ### 4. [TQP (Spacetime Architecture)](https://github.com/sadpig70/TQP)
 
 **Temporal Quantum Processor**
 
 * **Role**: Structural Layer (Virtualization)
-* **Key Tech**: **Temporal OS** - Expanding physical qubits via time-bin multiplexing.
-* **Result**: LiH molecular simulation with **1.77 mHa** error (chemical accuracy) on `ibm_fez`
+* **Key Tech**: **Temporal OS** & **Estimator V2**
+* **Result**: LiH (1.77 mHa), BeH₂ (Verified) on IBM Hardware
 
 ---
 

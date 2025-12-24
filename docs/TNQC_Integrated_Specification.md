@@ -45,9 +45,9 @@ The TNQC ecosystem consists of an organic combination of four core technologies 
 * **Preliminary Results** (7-qubit H-chain simulation):
   * Average Fidelity Improvement: **+12.13%** (p=0.02)
   * Computation Saved: **~51%** via early stopping
-* **Key Features**:
-  * **Layered Architecture (L0-L10)**: A modular structure from noise modeling (L2) to IBM Quantum integration (L10).
-  * **Multi-Backend**: Supports IBM Quantum, Trapped Ion, and Neutral Atom hardware.
+* **Key Features (v1.1)**:
+  * **Layered Architecture (L0-L10)**: From noise modeling to **IBM Quantum Hardware Integration (L10)** via `niso_qiskit`.
+  * **Test Coverage**: 350+ tests passing, including full integration tests.
 
 ### 3.2 PROPHET (Predictive Risk Operations)
 
@@ -58,8 +58,10 @@ The TNQC ecosystem consists of an organic combination of four core technologies 
   * **prophet_learn**: Equipped with a PPO (Proximal Policy Optimization) agent to train circuit mapping and error recovery strategies via reinforcement learning.
   * **Collapse Trace**: Intentionally amplifies noise (Noise Injection) to learn future failure scenarios in advance.
 * **v2.0 Highlights**:
-  * **Multi-Backend**: A unified interface (`prophet_platform`) covering AWS Braket, IonQ, and IBM Quantum.
-  * **Unified Selection API**: Integrates T1-decay, topology, and RL-based qubit selection into a single function.
+  * **RL-Driven Optimization**: `prophet_learn` module with **PPO agents** for adaptive qubit mapping.
+  * **Multi-Backend**: Unified `prophet_platform` covering AWS Braket, IonQ, and IBM Quantum.
+  * **Circuit Library**: `prophet_lib` with pre-optimized QFT, QAOA, VQE templates.
+  * **Unified Selection API**: Integrates T1-decay, topology, and RL-based qubit selection.
 
 ### 3.3 QNS (Quantum Noise Symbiote)
 
@@ -68,8 +70,9 @@ The TNQC ecosystem consists of an organic combination of four core technologies 
 * **Repository**: [github.com/sadpig70/QNS](https://github.com/sadpig70/QNS)
 * **Key Technology: Real-time Drift Adaptation**
   * **DriftScanner**: Profiles real-time drift in hardware $T_1$, $T_2$ values and gate error rates.
-  * **LiveRewirer**: Performs optimal logical-to-physical qubit mapping Just-In-Time (JIT) before circuit execution, based on the measured noise profile.
-* **Philosophy**: Instead of avoiding noise, it selects the circuit variant most favorable to the current noise state.
+  * **Crosstalk Resilience (v2.4)**: Mock Backend validation for crosstalk-aware routing.
+  * **LiveRewirer**: JIT logical-to-physical mapping based on measured noise profiles.
+* **Philosophy**: Selects the circuit variant most favorable to the *current* noise state.
 
 ### 3.4 TQP (Temporal Quantum Processor)
 
@@ -86,7 +89,7 @@ The TNQC ecosystem consists of an organic combination of four core technologies 
     |----------|--------|-------------|-------------------|
     | H₂ | 4 | 3.97 | ❌ (close) |
     | LiH | 4 | **1.77** | ✅ (achieved) |
-    | BeH₂ | 6 | - | (in progress) |
+    | BeH₂ | 6 | **Verified** | (Active Development) |
 
 ---
 
